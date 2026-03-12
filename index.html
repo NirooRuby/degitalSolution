@@ -69,7 +69,7 @@ footer { background: var(--primary-color); color:white; text-align:center; paddi
 .hero {
   position: relative;
   height: 100vh;
-  color: #111827; /* dark text for light images */
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,17 +101,6 @@ footer { background: var(--primary-color); color:white; text-align:center; paddi
   z-index: 2;
   max-width: 800px;
   padding: 20px;
-  text-shadow: 1px 1px 4px rgba(255,255,255,0.6); /* subtle shadow for readability */
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 20px;
-  margin-bottom: 30px;
 }
 
 .hero .cta {
@@ -126,13 +115,7 @@ footer { background: var(--primary-color); color:white; text-align:center; paddi
   transition:0.3s;
 }
 .hero .cta:hover { background:#1ebe5b; }
-
-@media(max-width:768px){
-  .hero h1{ font-size:36px; }
-  .hero p{ font-size:18px; }
-}
 </style>
-
 <script>
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
