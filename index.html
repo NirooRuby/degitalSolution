@@ -3,56 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IgnigtApp – UK IT Services</title>
+<title>IgnigtApp – Digital Solutions for UK Businesses</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#333;}
-header{background:#0f172a;color:white;padding:50px;text-align:center;}
-header h1{margin:0;font-size:36px;}
-header p{font-size:18px;}
-.hero{padding:60px 20px;text-align:center;}
-.services{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;padding:40px;}
-.card{background:white;padding:30px;width:280px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
-.card h3{margin-top:0;}
-.button{display:inline-block;margin-top:20px;padding:12px 20px;background:#25D366;color:white;text-decoration:none;border-radius:5px;}
-footer{background:#111827;color:white;text-align:center;padding:20px;margin-top:40px;}
+:root {
+    --primary-color: #0f172a;
+    --accent-color: #25D366;
+    --bg-color: #f5f7fb;
+    --text-color: #333;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+header { background: var(--primary-color); color: white; padding: 30px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+header img { height: 60px; }
+header nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 600; }
+.hero { text-align: center; padding: 80px 20px 50px 20px; }
+.hero h1 { font-size: 48px; margin-bottom: 20px; }
+.hero p { font-size: 20px; margin-bottom: 30px; }
+.hero .cta { padding: 15px 30px; background-color: var(--accent-color); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s; }
+.hero .cta:hover { background-color: #1ebe5b; }
+.services { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 60px 20px; }
+.card { background: white; padding: 30px; border-radius: 15px; width: 300px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); }
+.card h3 { margin-bottom: 15px; font-size: 22px; color: var(--primary-color); }
+.card p { margin-bottom: 15px; font-size: 16px; }
+.card b { color: var(--accent-color); }
+footer { background: var(--primary-color); color: white; text-align: center; padding: 20px; margin-top: 40px; font-size: 14px; }
+@media(max-width:768px){ .services{flex-direction:column;align-items:center;} .hero h1{font-size:36px;} }
 </style>
 </head>
 <body>
 
 <header>
-<h1>IgnigtApp</h1>
-<p>Helping UK Businesses Grow Online</p>
+<img src="logo.png" alt="IgnigtApp Logo">
+<nav>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-<h2>Affordable Digital Services for UK Businesses</h2>
-<p>Websites | Digital Marketing | WhatsApp Ordering Systems</p>
-<a class="button" href="https://wa.me/447512345678" target="_blank">Contact on WhatsApp</a>
+<h1>IgnigtApp – Grow Your Business Online</h1>
+<p>Professional Website Design, Digital Marketing & WhatsApp Ordering Systems for UK Businesses</p>
+<a class="cta" href="https://wa.me/447512345678" target="_blank">Contact on WhatsApp</a>
 </section>
 
-<section class="services">
+<section id="services" class="services">
 <div class="card">
 <h3>Website Design</h3>
-<p>Professional websites for restaurants, shops, and local businesses.</p>
+<p>Mobile-friendly, modern websites that convert visitors into customers.</p>
 <p><b>Starting from £299</b></p>
 </div>
 
 <div class="card">
 <h3>Digital Marketing</h3>
-<p>Grow your business with Facebook, Instagram, and Google marketing.</p>
+<p>Facebook, Instagram, and Google Ads campaigns to grow your business online.</p>
 <p><b>Starting from £99/month</b></p>
 </div>
 
 <div class="card">
 <h3>WhatsApp Ordering System</h3>
-<p>Customers can order directly from WhatsApp with a simple menu system.</p>
+<p>Customers can order directly from WhatsApp, making sales easy and instant.</p>
 <p><b>Setup £199</b></p>
 </div>
 </section>
 
-<footer>
+<footer id="contact">
 <p>© 2026 IgnigtApp</p>
-<p>Email: info@ignigtapp.co.uk</p>
+<p>Email: info@ignigtapp.co.uk | WhatsApp: +44 7512 345678</p>
 </footer>
 
 </body>
