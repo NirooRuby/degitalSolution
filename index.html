@@ -7,29 +7,38 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-    --primary-color: #0f172a;
-    --accent-color: #25D366;
-    --bg-color: #f5f7fb;
-    --text-color: #333;
+  --primary-color: #0f172a;
+  --accent-color: #25D366;
+  --bg-color: #f5f7fb;
+  --text-color: #333;
+  --section-bg: #ffffff;
 }
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
-header { background: var(--primary-color); color: white; padding: 30px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-header img { height: 60px; }
-header nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 600; }
-.hero { text-align: center; padding: 80px 20px 50px 20px; }
-.hero h1 { font-size: 48px; margin-bottom: 20px; }
-.hero p { font-size: 20px; margin-bottom: 30px; }
-.hero .cta { padding: 15px 30px; background-color: var(--accent-color); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s; }
-.hero .cta:hover { background-color: #1ebe5b; }
-.services { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 60px 20px; }
-.card { background: white; padding: 30px; border-radius: 15px; width: 300px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Inter', sans-serif; }
+body { background: var(--bg-color); color: var(--text-color); line-height:1.6; }
+header { background: var(--primary-color); color:white; padding:20px 50px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+header img { height:60px; }
+header nav a { color:white; margin-left:20px; text-decoration:none; font-weight:600; }
+.hero { text-align:center; padding:100px 20px 70px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e2c3b 100%); color:white; }
+.hero h1 { font-size:48px; margin-bottom:20px; }
+.hero p { font-size:20px; margin-bottom:30px; }
+.hero .cta { padding:15px 30px; background-color: var(--accent-color); color:white; border-radius:8px; text-decoration:none; font-weight:600; transition:0.3s; }
+.hero .cta:hover { background:#1ebe5b; }
+section { padding:60px 20px; }
+.section-title { text-align:center; margin-bottom:50px; font-size:32px; font-weight:700; color: var(--primary-color); }
+.services { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
+.card { background: var(--section-bg); padding:30px; border-radius:15px; width:300px; box-shadow:0 10px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
 .card:hover { transform: translateY(-5px); }
-.card h3 { margin-bottom: 15px; font-size: 22px; color: var(--primary-color); }
-.card p { margin-bottom: 15px; font-size: 16px; }
+.card h3 { margin-bottom:15px; font-size:22px; color: var(--primary-color); }
+.card p { margin-bottom:15px; }
 .card b { color: var(--accent-color); }
-footer { background: var(--primary-color); color: white; text-align: center; padding: 20px; margin-top: 40px; font-size: 14px; }
-@media(max-width:768px){ .services{flex-direction:column;align-items:center;} .hero h1{font-size:36px;} }
+.testimonials { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
+.testimonial-card { background: var(--section-bg); padding:30px; border-radius:15px; width:300px; box-shadow:0 8px 15px rgba(0,0,0,0.1); font-style:italic; }
+.testimonial-card p { margin-bottom:10px; }
+.testimonial-card span { font-weight:600; color: var(--primary-color); }
+.contact { text-align:center; background:#111827; color:white; padding:50px 20px; }
+.contact a { display:inline-block; margin-top:20px; padding:15px 30px; background-color: var(--accent-color); color:white; border-radius:8px; text-decoration:none; font-weight:600; }
+footer { background: var(--primary-color); color:white; text-align:center; padding:20px; font-size:14px; }
+@media(max-width:768px){ .services,.testimonials{flex-direction:column;align-items:center;} .hero h1{font-size:36px;} }
 </style>
 </head>
 <body>
@@ -38,39 +47,64 @@ footer { background: var(--primary-color); color: white; text-align: center; pad
 <img src="logo.png" alt="IgnigtApp Logo">
 <nav>
 <a href="#services">Services</a>
+<a href="#testimonials">Testimonials</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
 <section class="hero">
 <h1>IgnigtApp – Grow Your Business Online</h1>
-<p>Professional Website Design, Digital Marketing & WhatsApp Ordering Systems for UK Businesses</p>
+<p>Website Design | Digital Marketing | WhatsApp Ordering Systems</p>
 <a class="cta" href="https://wa.me/447512345678" target="_blank">Contact on WhatsApp</a>
 </section>
 
-<section id="services" class="services">
+<section id="services">
+<h2 class="section-title">Our Services</h2>
+<div class="services">
 <div class="card">
 <h3>Website Design</h3>
 <p>Mobile-friendly, modern websites that convert visitors into customers.</p>
 <p><b>Starting from £299</b></p>
 </div>
-
 <div class="card">
 <h3>Digital Marketing</h3>
-<p>Facebook, Instagram, and Google Ads campaigns to grow your business online.</p>
+<p>Grow your business online with Facebook, Instagram, and Google Ads.</p>
 <p><b>Starting from £99/month</b></p>
 </div>
-
 <div class="card">
-<h3>WhatsApp Ordering System</h3>
-<p>Customers can order directly from WhatsApp, making sales easy and instant.</p>
+<h3>WhatsApp Ordering</h3>
+<p>Customers can order directly from WhatsApp for fast and easy sales.</p>
 <p><b>Setup £199</b></p>
+</div>
 </div>
 </section>
 
-<footer id="contact">
-<p>© 2026 IgnigtApp</p>
-<p>Email: info@ignigtapp.co.uk | WhatsApp: +44 7512 345678</p>
+<section id="testimonials">
+<h2 class="section-title">What Our Clients Say</h2>
+<div class="testimonials">
+<div class="testimonial-card">
+<p>"IgnigtApp built our site in 3 days — we doubled our orders!"</p>
+<span>— Sarah, Restaurant</span>
+</div>
+<div class="testimonial-card">
+<p>"Amazing support and fast delivery. Highly recommend!"</p>
+<span>— Mark, Retail Shop</span>
+</div>
+<div class="testimonial-card">
+<p>"Our digital marketing campaign increased sales by 50%!"</p>
+<span>— Anna, Cafe</span>
+</div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Get in Touch</h2>
+<p>Contact us on WhatsApp or email to start your project.</p>
+<a href="https://wa.me/447512345678" target="_blank">Contact on WhatsApp</a>
+</section>
+
+<footer>
+<p>© 2026 IgnigtApp | Email: info@ignigtapp.co.uk | WhatsApp: +44 7512 345678</p>
 </footer>
 
 </body>
